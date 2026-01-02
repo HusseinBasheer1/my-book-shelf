@@ -1,0 +1,353 @@
+/* Global Styles */
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(-45deg, #FFB76C, #FFD8A9, #FFF3E1, #FFB76C);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 20px 10px 20px;
+  background: rgba(255, 109, 31, 0.1);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: #FF6D1F;
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  color: #FF944D;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 2px solid rgba(255,109,31,0.2);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+footer a {
+  color: #FF6D1F;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #FF6D1F;
+  margin: 20px 0px 40px 0px;
+}
+
+/* Buttons */
+.button-holder {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.add-book {
+  background: linear-gradient(135deg, #FF6D1F 0%, #FF944D 100%);
+  padding: 12px 40px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+.add-book:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Book Cards */
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+}
+
+.book-card {
+  display: flex;
+  background: #FF8441;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 60%;
+  transition: transform 0.3s;
+  align-items: center;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.cover img {
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.no-cover {
+  width: 140px;
+  height: 200px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+/* Info Section */
+.info {
+  margin-left: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.info p {
+  margin: 5px 0;
+}
+
+/* Actions */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;      
+  justify-content: flex-start; 
+
+}
+
+.btn-edit, .btn-delete {
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  padding: 8px 16px;
+  min-width: 120px; 
+  text-align: center;
+}
+
+.btn-edit {
+  background-color: #FAF3E1;
+  color: #FF6D1F;
+}
+
+.btn-edit:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-delete {
+  background-color: #bc0303;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: #8e0000;
+}
+
+/* Form Pages */
+.card-form {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #FF6D1F;
+  box-shadow: 0 0 8px rgba(255,109,31,0.2);
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #FF6D1F;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #e65a00;
+}
+
+a.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #FF6D1F;
+  text-decoration: none;
+}
+
+a.back-link:hover {
+  text-decoration: underline;
+}
+
+.form-text a {
+  color: #FF6D1F;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-text a:hover {
+  text-decoration: underline;
+}
+
+/* Make the book cards responsive */
+@media (max-width: 1024px) {
+  .book-card {
+    width: 80%; /* slightly narrower on tablets */
+    flex-direction: column; /* stack cover and info */
+    align-items: center;
+    text-align: center;
+  }
+
+  .info {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .cover img, .no-cover {
+    width: 180px;
+    height: auto;
+  }
+
+  .actions {
+    justify-content: center; 
+  }
+}
+
+
+/* For smaller tablets and large phones */
+@media (max-width: 768px) {
+  .book-card {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .add-book {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .book-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .cover img, .no-cover {
+    width: 120px;
+    height: auto;
+  }
+
+  .info h3 {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .add-book {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+}
